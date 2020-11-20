@@ -1,9 +1,18 @@
-function Welcome({ name }) {
+function Welcome(props) {
+  const { name } = props;
   const time = 17;
   const greetingMsg = getGreetingMsg(time);
 
+  function handelClick(name) {
+    console.log(name);
+  }
+
   return (
-    <h1>
+    <h1
+      onClick={() => {
+        handelClick(name);
+      }}
+    >
       {greetingMsg} {name}!
     </h1>
   );
