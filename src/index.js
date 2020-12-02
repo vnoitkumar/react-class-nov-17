@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import localStorage, { setItem, getItem } from './utils/localstorage';
+
 import Welcome from './welcome';
 import UserInfo from './user-info';
 import ToogleUi from './toogle-ui';
+import Form from './form';
 
 function App() {
   const names = ['Ram', 'Sam', 'Kumar'];
@@ -14,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Form />
       {list}
       <UserInfo />
       <ToogleUi />
